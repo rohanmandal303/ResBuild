@@ -1,9 +1,11 @@
 import express from 'express';
 import multer from 'multer';
+
 import { analyzeResume } from '../controllers/resumeController.js';
 
 const router = express.Router();
-const upload = multer({ dest: 'uploads/' });
+
+const upload = multer({ dest: '/tmp/' });
 
 router.post('/analyze', upload.single('resume'), analyzeResume);
 
