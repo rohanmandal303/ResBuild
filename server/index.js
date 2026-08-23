@@ -33,7 +33,7 @@ const connectDB = async () => {
 connectDB();
 
 // Middleware
-app.use(cors());
+app.use(cors("https://res-build-ecru.vercel.app/"));
 app.use(express.json());
 
 // Routes
